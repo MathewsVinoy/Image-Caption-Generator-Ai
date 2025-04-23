@@ -1,4 +1,5 @@
-import torch 
+import torch
+import torchvision
 from torch import nn 
 
 class Model(nn.Module):
