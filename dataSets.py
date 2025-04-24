@@ -1,5 +1,4 @@
 import torch
-
 from PIL import Image
 from skimage import io
 from torch.utils.data import DataLoader, Dataset
@@ -18,7 +17,6 @@ class DatasetsCustom(Dataset):
 
     def __len__(self):
         return len(self.X)
-
     def __getitem__(self, idx):
         img = self.load_image(idx)
         if self.transform:
