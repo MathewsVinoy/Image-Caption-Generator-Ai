@@ -1,7 +1,6 @@
 import torch
 from PIL import Image
-from skimage import io
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import Dataset
 
 class DatasetsCustom(Dataset):
     def __init__(self, x, y, img_path, transform=None):
