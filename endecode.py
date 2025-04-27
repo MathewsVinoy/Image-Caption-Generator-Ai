@@ -1,3 +1,5 @@
+import torch
+
 words_to_num = {char: idx for idx, char in enumerate(set(tokens))}
 num_to_words = {idx: char for idx, char in enumerate(set(tokens))}
 
