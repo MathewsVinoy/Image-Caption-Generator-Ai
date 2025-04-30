@@ -1,7 +1,5 @@
-import torch
-import nltk
-
-from nltk.tokenize import word_tokenize
+import torch                                # type: ignore
+from nltk.tokenize import word_tokenize     # type: ignore
 
 class DataConverter:
     def __init__(self,tokens):
@@ -9,7 +7,6 @@ class DataConverter:
         self.num_to_words = {idx: char for idx, char in enumerate(set(tokens))}
 
     def encode2(self,l):
-
         l=str(l)
         value = [self.words_to_num[c] for c in word_tokenize(l)]
         while len(value) <82:
