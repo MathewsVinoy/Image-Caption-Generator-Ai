@@ -1,6 +1,7 @@
 import torch
 from PIL import Image
 from torch.utils.data import Dataset
+from endecode import DataConverter
 
 class DatasetsCustom(Dataset):
     def __init__(self, x, y, img_path, transform=None):
@@ -21,6 +22,6 @@ class DatasetsCustom(Dataset):
         if self.transform:
             img = self.transform(img)
         output = self.y.iloc[idx]
-        output = encode2(output)
+        output = DataConverter.encode2(output)
         # output = torch.tensor(output, dtype=torch.float32)  # Ensure output is a tensor
         return img, output
