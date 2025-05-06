@@ -22,5 +22,5 @@ class DatasetsCustom(Dataset):
             img = self.transform(img)
         output = self.y.iloc[idx]
         output = DataConverter.encode2(output)
-        output = torch.tensor(output, dtype=torch.float32)
+        # output = torch.tensor(output, dtype=torch.float32)
         return img, output
